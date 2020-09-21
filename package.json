@@ -9,7 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.0"
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.0",
+    "onsenui": "^2.10.10",
+    "sass-loader": "^10.0.2",
+    "vue-onsenui": "^2.6.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/types": "^2.14.4"
+  }
 }

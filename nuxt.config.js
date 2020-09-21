@@ -35,6 +35,9 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {
+      src: '~/plugins/library.js'
+    }
   ],
   /*
   ** Auto import components
