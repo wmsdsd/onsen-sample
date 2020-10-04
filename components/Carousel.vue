@@ -31,7 +31,8 @@
 						:index.sync="defaultIndex">
 						<v-ons-carousel-item
 							class="carousel-default__item"
-							v-for="img in images">
+							v-for="(img, key) in images"
+							:key="key">
 							<img
 								:src="img"
 								alt="image" />
@@ -48,7 +49,8 @@
 						auto-scroll>
 						<v-ons-carousel-item
 							class="carousel-swipe__item"
-							v-for="img in images">
+							v-for="(img, key) in images"
+							:key="key">
 							<img
 								:src="img"
 								alt="image" />
@@ -68,7 +70,8 @@
 						auto-scroll>
 						<v-ons-carousel-item
 							class="carousel-card__item"
-							v-for="img in images">
+							v-for="(img, key) in images"
+							:key="key">
 							<img
 								:src="img"
 								alt="image" />
@@ -77,7 +80,6 @@
 				</div>
 			</div>
 		</div>
-
 	</v-ons-page>
 </template>
 
@@ -146,6 +148,7 @@ export default {
 				width: 10px;
 				height: 10px;
 				border-radius: 10px;
+				border: 1px solid gray;
 				background-color: gray;
 				margin: 0 10px;
 			}
@@ -153,14 +156,13 @@ export default {
 	}
 
 	&-card {
-		padding: 0 20px;
+		width: 100%;
 		&__block {
-			margin: 0 -20px;
+			width: 100%;
+			padding: 0 20px;
 		}
 		&__item {
-			width: 100%;
-			padding: 0 40px;
-			margin: 0 10px;
+			padding: 0 10px;
 			img {
 				width: 100%;
 			}
